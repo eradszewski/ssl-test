@@ -1,0 +1,25 @@
+version: "3.7"
+services:
+  client-dummy:
+    build:
+      context: .
+#    volumes:
+#    - ./src/main/resources/:/cert/
+    environment:
+      SPRING_PROFILES_ACTIVE: remotetest
+      # This env controll the Entrypoint ARGS only for Demo usage(make it easy to show test and running server without rebuild)
+      MVN_BUILD_ARGS: "test"
+      SERVER_SSL_KEY-STORE: /cert/keystore.jks
+      SERVER_SSL_TRUST-STORE: /cert/truststore.jks
+
+  server-dummy:
+    build:
+      context: .
+    expose:
+    - 8443
+#    volumes:
+#      - ./src/main/resources/:/cert/
+    environment:
+      SERVER_SSL_KEY-STORE: /cert/keystore.jks
+      SERVER_SSL_TRUST-STORE: /cert/truststore.jks
+      #only for demo set over env to call a remote server

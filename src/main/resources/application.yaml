@@ -1,0 +1,25 @@
+server:
+  port: 8443
+  ssl:
+    key-store-password: allpassword
+    trust-store-password: allpassword
+    # classpath: not working for executable jars overwrite by env / or make a dev profile
+    key-store: classpath:keystore.jks
+    trust-store: classpath:truststore.jks
+    client-auth: need
+
+security:
+  headers:
+    hsts: NONE
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+# custom fields (add company prop)
+app:
+  ssl:
+    #  username which is the CN of the client certificate
+    username: localhost
+    password: none
+    role: USER

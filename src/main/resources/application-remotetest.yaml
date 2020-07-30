@@ -1,0 +1,5 @@
+#only for demo set over env to call a remote server
+app:
+  test:
+    host-port-ex: server-dummy:8443
+    delay: 10000

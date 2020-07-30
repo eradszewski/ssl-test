@@ -1,0 +1,28 @@
+{
+  "properties": [
+    {
+      "name": "app.test.host-port-ex",
+      "type": "java.lang.String",
+      "description": "Description for app.test.host-port-ex."
+    },
+    {
+      "name": "app.test.delay",
+      "type": "java.lang.String",
+      "description": "Description for app.test.delay."
+    },
+    {
+      "name": "app.ssl.username",
+      "type": "java.lang.String",
+      "description": "Description for app.ssl.username."
+    },
+    {
+      "name": "app.ssl.password",
+      "type": "java.lang.String",
+      "description": "Description for app.ssl.password."
+    },
+    {
+      "name": "app.ssl.role",
+      "type": "java.lang.String",
+      "description": "Description for app.ssl.role."
+    }
+  ] }
